@@ -39,6 +39,11 @@ class RandomWords extends StatefulWidget {
 //means that this class is a subclass which inherits State and is of type <RandomWords> - instead of Generic type T
 class _RandomWordsState extends State<RandomWords> {
   //State class maintains the State of the Widget - it handles it's content and stuff.
+
+  //in here coz State contains the logic of the widgets
+  final _suggestions = <WordPair>[];
+  final _biggerFont = const TextStyle(fontSize: 18.0);
+
   @override
   Widget build(BuildContext context) {
     //generate WordPair and return it wrapped in sub-widget Text (in PascalCase)
