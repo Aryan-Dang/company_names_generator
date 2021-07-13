@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           //the title of the App Bar
-          title: const Text('Welcome to Flutter'),
+          title: const Text('Company Name Generator'),
         ),
         //the body of the Scaffold (widget)
         body: const Center(
