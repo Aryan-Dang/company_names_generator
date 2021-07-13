@@ -40,8 +40,11 @@ class RandomWords extends StatefulWidget {
 
 //means that this class is a subclass which inherits State and is of type <RandomWords> - instead of Generic type T
 class _RandomWordsState extends State<RandomWords> {
+  //State class maintains the State of the Widget - it handles it's content and stuff.
   @override
   Widget build(BuildContext context) {
-    return Container();
+    //generate WordPair and return it wrapped in sub-widget Text (in PascalCase)
+    final wordPair = WordPair.random();
+    return Text(wordPair.asPascalCase);
   }
 }
