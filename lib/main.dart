@@ -38,6 +38,7 @@ class RandomWords extends StatefulWidget {
   _RandomWordsState createState() => _RandomWordsState();
 }
 
+//means that this class is a subclass which inherits State and is of type <RandomWords> - instead of Generic type T
 class _RandomWordsState extends State<RandomWords> {
   @override
   Widget build(BuildContext context) {
