@@ -10,9 +10,6 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    //adding code before return statement ofc
-    //generates a random word pair each time app is reloaded/hot reloaded
-    final wordPair = WordPair.random();
     return MaterialApp(
       title: 'Company Name Generator',
       home: Scaffold(
@@ -22,7 +19,8 @@ class MyApp extends StatelessWidget {
         ),
         //the body of the Scaffold (widget)
         body: Center(
-          child: Text(wordPair.asPascalCase),
+          //now holds a stateful widget which means that it would keep changing unlike (not fixed widget as before with Text)
+          child: RandomWords(),
         ),
       ),
     );
