@@ -29,6 +29,8 @@ class MyApp extends StatelessWidget {
   }
 }
 
+//Stateful widget does nothing more than provide an helpful override method
+//  to create the state
 class RandomWords extends StatefulWidget {
   const RandomWords({Key? key}) : super(key: key);
 
