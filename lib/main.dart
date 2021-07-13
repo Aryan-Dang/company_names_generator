@@ -12,17 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Company Name Generator',
-      home: Scaffold(
-        appBar: AppBar(
-          //the title of the App Bar
-          title: const Text('Company Name Generator'),
-        ),
-        //the body of the Scaffold (widget)
-        body: Center(
-          //now holds a stateful widget which means that it would keep changing unlike (not fixed widget as before with Text)
-          child: RandomWords(),
-        ),
-      ),
+      home: RandomWords(),
     );
   }
 }
@@ -46,9 +36,13 @@ class _RandomWordsState extends State<RandomWords> {
 
   @override
   Widget build(BuildContext context) {
-    //generate WordPair and return it wrapped in sub-widget Text (in PascalCase)
-    final wordPair = WordPair.random();
-    return Text(wordPair.asPascalCase);
+    return Scaffold(
+      appBar: AppBar(
+        //wrapped in sub-widget Text
+        title: const Text('Company Name Generator'),
+      ),
+      body: _buildSuggestions(),
+    );
   }
 
   //builds ListView widget
